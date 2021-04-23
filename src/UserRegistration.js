@@ -56,7 +56,19 @@ if (result3 == true) {
     console.log(" your input is invalid");
 
 }
+const passwordRegex = new RegExp('^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[a-z])(?=.*[#?!@$%^&*-]).{8,}$');
+var password = read.question('Enter your password')
+var result4 = passwordRegex.test(password)
 
+console.log(` ${result4},`);
+
+if (result4 == true) {
+    console.log("your input is valid");
+
+} else {
+    console.log(" your input is invalid");
+
+}
 
 
 
