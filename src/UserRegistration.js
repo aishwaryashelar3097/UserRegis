@@ -1,23 +1,38 @@
-const readline = require('readline');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+const read = require('readline-sync');
 const FirstNameRegex = new RegExp("^[A-Z][a-zA-Z]{2,}$");
+var FirstName = read.question('Enter your Name')
 
-rl.question('Enter first name ', (answer) => { 
-    var result= FirstNameRegex.test(answer)
-    
-  console.log(` ${result},`);
+var result = FirstNameRegex.test(FirstName)
+
+console.log(` ${result},`);
 
 
-if       (result ==true) {
-    console.log ("your input is valid");
-    
-} else
- { console.log (" your input is invalid");
-    
+if (result == true) {
+    console.log("your input is valid");
+
+} else {
+    console.log(" your input is invalid");
 }
-  rl.close();
-});
+
+
+const LastNameRegex = new RegExp("^[A-Z][a-zA-Z]{2,}$");
+var LastName = read.question('Enter Last Name')
+var result1 = LastNameRegex.test(LastName)
+
+console.log(` ${result1},`);
+
+
+if (result1 == true) {
+    console.log("your input is valid");
+
+} else {
+    console.log(" your input is invalid");
+
+}
+
+
+
+
+
+
