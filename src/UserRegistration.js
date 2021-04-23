@@ -43,7 +43,19 @@ if (result2 == true) {
     console.log(" your input is invalid");
 
 }
+const PhoneRegex = new RegExp('^([9]{1}[1]{1})\\s{0,1}[0-9]{10}$');
+var Phone = read.question('Enter your phone no')
+var result3 = PhoneRegex.test(Phone)
 
+console.log(` ${result3},`);
+
+if (result3 == true) {
+    console.log("your input is valid");
+
+} else {
+    console.log(" your input is invalid");
+
+}
 
 
 
