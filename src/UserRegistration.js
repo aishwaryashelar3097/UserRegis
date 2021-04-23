@@ -10,7 +10,9 @@ rl.question('Enter first name ', (answer) => {
     var result= FirstNameRegex.test(answer)
     
   console.log(` ${result},`);
-if (result ==true) {
+
+
+if       (result ==true) {
     console.log ("your input is valid");
     
 } else
